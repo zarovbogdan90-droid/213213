@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Эта строчка нужна, чтобы сайт хорошо выглядел на телефоне -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Открытка для мамы 💌</title>
+  <!-- Подключаем файл со стилями (вся красота живёт там) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Главный блок открытки -->
+  <div class="card">
+
+    <!-- Сердечко сверху -->
+    <div class="heart">❤️</div>
+
+    <h1>Маме</h1>
+    <p class="hint">Нажми на кнопку 👇</p>
+
+    <!-- Кнопка. При нажатии сработает функция из script.js -->
+    <button id="openButton" onclick="openCard()">Открыть открытку</button>
+
+    <!-- Этот блок с поздравлением сначала спрятан.
+         Класс "hidden" прячет его (смотри style.css) -->
+    <div id="message" class="hidden">
+      <!-- ФОТОГРАФИЯ: просто положи файл photo.jpg рядом с этим файлом —
+           и фото появится в открытке! Можно взять любой снимок с мамой.
+           Строчка onerror нужна на случай, если фото ещё не добавлено:
+           тогда место под него просто спрячется, и ничего не сломается. -->
+      <img id="photo" src="photo.jpg" alt="Наше фото" onerror="this.style.display='none'">
+      <p class="text">
+        Мама, поздравляю тебя! 🎉<br><br>
+        Ты самая добрая, самая заботливая и самая лучшая на свете.
+        Спасибо тебе за всё! Я тебя очень люблю! 💐
+      </p>
+      <p class="signature">— Самат</p>
+    </div>
+
+  </div>
+
+  <!-- Подключаем файл с кодом (вся магия живёт там) -->
+  <script src="script.js"></script>
+</body>
+</html>
